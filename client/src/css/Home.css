@@ -1,0 +1,147 @@
+/* .grid{
+    display: grid;
+}
+.grid-two-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.abt-sec{
+    margin-left: 50px;
+    padding:30px;
+}
+
+.intro{
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: xx-large;
+    width: fit-content;
+    
+}
+
+.about{
+    width: 60%;
+    font-size: x-large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    text-align:justify;
+}
+.pp{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 70px;
+
+}
+.pp-div{
+    float: right;
+    position: relative;
+    bottom: 350px;
+    right: 30px;
+}
+.into-section{
+} */
+
+/* .profile-container {
+    display: flex;
+    align-items: center;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    color: #f0f0c0; 
+}
+
+.profile-image img {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;  
+}
+
+.profile-text h1 {
+    font-size: 1.8rem; 
+    margin-bottom: 10px;
+}
+
+.profile-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-image {
+        margin-bottom: 15px;
+    }
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+} */
+
+ .profile-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  background-color: #323131; 
+  padding: 20px;
+  color: #f5f5f5; 
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+  object-fit: cover;
+}
+
+.profile-text {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.profile-text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.profile-text p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+} 
+.resume-btn{
+    margin-top: 12px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #121212;
+    background-color: #cac18f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover{
+    background-color: #f5b700;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(255, 225, 53, 0.2);
+}
+
+
+
+
+

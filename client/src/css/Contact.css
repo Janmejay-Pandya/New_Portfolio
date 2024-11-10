@@ -1,0 +1,62 @@
+.contact-container{
+    margin-left: 80px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 20px;
+}
+.label-name{
+    font-weight: 400;
+    font-size: x-large;
+    margin-right: 20px;
+}
+.input-name{
+    width: 250px;
+    height: 35px;
+    padding: 12px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.label-email{
+    font-weight: 400;
+    font-size: x-large;
+    margin-right: 20px;
+}
+.input-email{
+    width: 250px;
+    height: 35px;
+    padding: 12px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+.label-msg{
+    font-weight: 400;
+    font-size: x-large;
+    margin-right: 20px;
+}
+.input-msg{
+    border-radius: 12px;
+    width: 250px;
+    height: 50px;
+    padding: 12px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.btn{
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: 500;
+    background-color: blue;
+    padding: 6px;
+    /* width: fit-content; */
+    border-radius: 20px;
+}

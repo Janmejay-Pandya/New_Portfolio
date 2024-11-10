@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 30px;
+    background-color: #333; /* Dark background for a sleek look */
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px; /* Adjust height as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow on top edge */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+}

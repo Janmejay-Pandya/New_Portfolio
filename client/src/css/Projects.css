@@ -1,0 +1,114 @@
+/* .projects{
+    margin-left: 88px;
+    margin-top: 80px;
+}
+.prj{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.prj-items li{
+    margin-left: 20px;
+    font-size: large;
+    margin-bottom: 20px;
+    font-weight: 300px;
+}
+
+.prj-items button{
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 12px;
+}
+.git{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+} */
+
+.projects {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: #f1f1f1;
+}
+
+.prj-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #d9d3bb;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tech-badge {
+    background-color: #444;
+    color: #d9d3bb;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.source-button {
+    margin-top: 10px;
+    background-color: #333;
+    color: #d9d3bb;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.source-button:hover {
+    background-color: #555;
+}
+
+.git {
+    width: 20px;
+    height: 20px;
+}
