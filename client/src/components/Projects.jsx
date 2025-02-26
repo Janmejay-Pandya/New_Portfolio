@@ -1,92 +1,75 @@
-// import "../css/Projects.css"
-// import gp from "../assets/github.png";
-// function Projects() {
-//     return (
-//         <div>
-//             <div className="projects">
-//                 <h1 className="prj"> Projects</h1>
-//                 <ul className="prj-items">
-//                     <li>1. Cafe Order Management System:<a href="https://github.com/Janmejay-Pandya/Cafe-Order-Management-System"> <button> <img className="git" src={gp} alt="" /> Source</button></a>
-//                         <br />
-//                         This Project was
-//                         created using JAVA which has various
-//                         functionalities.
-//                     </li>
-//                     <li>2. Demographic Surface Water Mapping:<a href="https://github.com/Janmejay-Pandya/Demographic_Water_Surface_Mapping"><button> <img className="git" src={gp} alt="" /> Source</button></a>
-//                         <br />
-//                         Used for
-//                         predicting future land and water patterns providing
-//                         valuable insights for sustainable planning and
-//                         conservation efforts.
-
-//                     </li>
-//                     <li>3. Web development:<a href="https://github.com/Janmejay-Pandya?tab=repositories"><button> <img className="git" src={gp} alt="" /> Source</button></a>
-//                         <br />
-//                         Built some projects for web
-//                         development like Roll the Dice, To-do list,
-//                         calculator etc.
-
-//                     </li>
-//                 </ul>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Projects;
-
 import "../css/Projects.css";
 import gp from "../assets/github.png";
 import cm from "../assets/cafe_management.jpg";
-import dm from "../assets/demographic.png";
-import roll from "../assets/roll_the_dice.png";
+import quiz from "../assets/quiz.png";
+import qc from "../assets/chat.png";
+import cl from "../assets/class.png";
 
 function Projects() {
     const projects = [
+        {
+            name: "Chat Application: QuickChat",
+            description: "This project is designed to provide real-time communication between users through an intuitive and feature-rich chat interface. Built with modern technologies, the application ensures a seamless user experience, robust performance, and secure communication.",
+            tech: ["React", "Javascript", "Tailwind", "Web Socket", "Express js", "MongoDb"],
+            link: "https://github.com/Janmejay-Pandya/Chat-Application",
+            image: qc
+        },
+        {
+            name: "Quiz App",
+            description: "A dynamic quiz application built with React that features an engaging user interface, power-ups, scoring system and a different result page if all the answers are correct and another one if some questions are wrong.",
+            tech: ["Tailwind", "JavaScript", "React"],
+            link: "https://github.com/Janmejay-Pandya/Quiz_App",
+            image: quiz
+        },
+        {
+            name: "Classroom Management System",
+            description: "This project provides an efficient solution for managing classroom activities, student performance, attendance tracking, and communication between teachers and students. Built with a focus on usability, it is designed to streamline the administrative tasks within an educational environment.",
+            tech: ["JavaScript", "React", "Node js", "Express js", "MongoDb"],
+            link: "https://github.com/Janmejay-Pandya/Quiz_App",
+            image: cl
+        },
         {
             name: "Cafe Order Management System",
             description: "This Project was created using JAVA which has various functionalities.",
             tech: ["Java", "Swing", "JDBC"],
             link: "https://github.com/Janmejay-Pandya/Cafe-Order-Management-System",
             image: cm
-        },
-        {
-            name: "Demographic Surface Water Mapping",
-            description: "Used for predicting future land and water patterns providing valuable insights for sustainable planning and conservation efforts.",
-            tech: ["Python", "Data Analysis", "GIS"],
-            link: "https://github.com/Janmejay-Pandya/Demographic_Water_Surface_Mapping",
-            image: dm
-        },
-        {
-            name: "Web Development",
-            description: "Built some projects for web development like Roll the Dice, To-do list, calculator etc.",
-            tech: ["HTML", "CSS", "JavaScript", "React"],
-            link: "https://github.com/Janmejay-Pandya?tab=repositories",
-            image: roll
         }
     ];
 
     return (
         <div className="projects">
-            <h1 className="prj-title">Projects</h1>
-            <div className="project-cards">
-                {projects.map((project, index) => (
-                    <div className="project-card" key={index}>
-                        <img src={project.image} alt={project.name} className="project-image" />
-                        <h2 className="project-name">{project.name}</h2>
-                        <p className="project-description">{project.description}</p>
-                        <div className="project-tech">
-                            {project.tech.map((tech, techIndex) => (
-                                <span className="tech-badge" key={techIndex}>{tech}</span>
-                            ))}
+            <div className="projects-container">
+                <h1 className="prj-title">My Projects</h1>
+                <div className="projects-divider">
+                    <span></span>
+                </div>
+
+                <div className="project-grid">
+                    {projects.map((project, index) => (
+                        <div className="project-card" key={index}>
+                            <div className="project-image-container">
+                                <img src={project.image} alt={project.name} className="project-image" />
+                                <div className="project-overlay">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project-btn">
+                                        <img className="git" src={gp} alt="GitHub" /> View Source
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="project-content">
+                                <h2 className="project-name">{project.name}</h2>
+                                <p className="project-description">{project.description}</p>
+
+                                <div className="project-tech">
+                                    {project.tech.map((tech, techIndex) => (
+                                        <span className="tech-badge" key={techIndex}>{tech}</span>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            <button className="source-button">
-                                <img className="git" src={gp} alt="GitHub" /> Source
-                            </button>
-                        </a>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

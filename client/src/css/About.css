@@ -1,156 +1,269 @@
-/* .work-img{
-    border-radius: 50%;
-    width: 20%;
-    height: 30%;
-    float: left;
-    color: white;
-}
-.work_exp{
-    margin-left: 50px;
-    padding:30px;
-    margin-top: 9.5%;
-    display: inline-block;
-    cursor: pointer;
-}
-.desc{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 20px;
-    top: 3px;
-}
-.arrow:hover{
-    animation: fadeInAnimation ease-out 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.role{
-    font-size: large;
-    margin-top: 5px;
-    width: fit-content;
-
-}
-.company-name{
-    font-weight: bold;
-    font-size: large;
-    display: inline-block;
-    margin-right: 5px;
-    width: fit-content;
-}
-.arrow{
-    position: absolute;
-    top: 11px;
-    right: 90px;
-    width: 20px; 
-    height: 20px;
-    opacity: 0%;    
-    transition: right 0.5s ease, opacity 0.5s ease;
-}
-.desc:hover .arrow {
-    opacity: 1; 
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: #f5f5f5;
 }
 
-.duration{
-    position: relative;
-    left: 70vw;
-    width: fit-content;
-    bottom: 30px;
-
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.wk{
-    position: absolute;
-    bottom: 130px;
-    left: 88px;
-    font-size: xx-large;
-    font-weight: bolder;
-}
-.container{
-    position: relative;
-    top:50px ;
-    height: fit-content;
-} */
 
-.container {
-  padding: 20px;
-  background-color: black;
-  color: #f1f1f1;
-  font-family: Arial, sans-serif;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
   text-align: center;
+  color: #d9d3bb;
+  position: relative;
+  display: inline-block;
 }
 
-.wk, .education h2 {
-  font-size: 1.9rem;
-  color: #d9d3bb;
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #d9d3bb, #cac18f);
+  border-radius: 3px;
+}
+
+/* Work Experience Styles */
+.work-experience-container {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.work-experience-container.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .work-link {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
-.work-exp {
+.work-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: black;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(145deg, rgba(35, 35, 35, 0.9), rgba(25, 25, 25, 0.9));
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
-.work-exp:hover {
-  background-color: #444444;
+.work-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #d9d3bb, #cac18f);
+  transition: width 0.3s ease;
 }
 
-.work-img, .arrow {
-  width: 40px;
-  height: 40px;
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(145deg, rgba(45, 45, 45, 0.9), rgba(35, 35, 35, 0.9));
 }
 
-.desc {
-  text-align: left;
-  flex-grow: 1;
-  margin-left: 10px;
+.work-card:hover::before {
+  width: 8px;
 }
 
-.company-name, .university {
-  font-weight: bold;
-  font-size: 1.2rem;
+.work-card-left {
+  flex: 0 0 70px;
+  margin-right: 20px;
+}
+
+.work-logo-container {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.work-logo {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.work-card-content {
+  flex: 1;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #ffffff;
+  margin: 0 0 5px 0;
 }
 
-.role, .degree, .edu-duration, .duration {
+.job-role {
+  font-size: 1.1rem;
+  color: #d9d3bb;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.job-duration {
+  display: flex;
+  align-items: center;
   color: #aaaaaa;
+  font-size: 0.95rem;
 }
 
-.education {
-  margin-top: 20px;
-  background-color: black;
-  padding: 15px;
-  border-radius: 10px;
-
-}
-.education-heading{
-    font-size: 1.7rem;
-    color: #ffe58a;
-
-}
-.university{
-    font-size: 1.4rem;
+.duration-icon {
+  margin-right: 8px;
+  opacity: 0.8;
 }
 
-.degree, .edu-duration{
-    font-size: x-large;
+.work-card-right {
+  flex: 0 0 30px;
+  display: flex;
+  justify-content: flex-end;
 }
-.edu-details{
-    left: 10px;
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-card:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Education Styles */
+.education-title {
+  margin-bottom: 40px;
+  color: #ffe58a;
+}
+
+.education-container {
+  width: 100%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.education-container.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card {
+  background: linear-gradient(145deg, rgba(35, 35, 35, 0.9), rgba(25, 25, 25, 0.9));
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffe58a, #d5b045);
+  border-radius: 4px 0 0 4px;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.university-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.degree-name {
+  font-size: 1.3rem;
+  color: #ffe58a;
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.education-duration {
+  display: flex;
+  align-items: center;
+  color: #aaaaaa;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .work-card, .education-card {
+    padding: 20px;
+  }
+  
+  .work-card-left {
+    flex: 0 0 50px;
+    margin-right: 15px;
+  }
+  
+  .work-logo-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .company-name {
+    font-size: 1.3rem;
+  }
+  
+  .job-role {
+    font-size: 1rem;
+  }
+  
+  .university-name {
+    font-size: 1.3rem;
+  }
+  
+  .degree-name {
+    font-size: 1.1rem;
+  }
 }
