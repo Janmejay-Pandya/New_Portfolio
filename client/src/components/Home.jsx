@@ -7,8 +7,10 @@ import Skills from "./Skills.jsx";
 import Projects from "./Projects.jsx";
 import Button from "./Button.jsx";
 import Footer from "./Footer.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,6 +61,9 @@ function Home() {
       clearInterval(deletingInterval);
     };
   }, [currentIndex]);
+  const handleClick = () => {
+    navigate("/contact");
+  }
 
   return (
     <>
@@ -96,7 +101,7 @@ function Home() {
                     </button>
                   </a>
                   <a href="#contact" className="smooth-scroll">
-                    <button className="contact-btn secondary-btn">
+                    <button onClick={handleClick} className="contact-btn secondary-btn">
                       <span className="btn-icon">💬</span> Contact Me
                     </button>
                   </a>
