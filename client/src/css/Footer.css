@@ -1,18 +1,69 @@
 .footer {
-    margin-top: 30px;
-    background-color: #333; /* Dark background for a sleek look */
-    color: white;
-    font-size: 18px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px; /* Adjust height as needed */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow on top edge */
+  margin-top: 64px;
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.95) 0%, rgba(5, 5, 7, 0.95) 100%);
+  color: var(--text);
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.35);
+  position: relative;
 }
 
-.footer p {
-    margin: 0; /* Remove default margin */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
+  opacity: 0.7;
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline,
+.footer-note,
+.copyright {
+  margin: 4px 0 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-note {
+  opacity: 0.9;
+}
+
+.footer-meta {
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-meta {
+    text-align: left;
+  }
+}

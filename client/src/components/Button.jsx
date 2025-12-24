@@ -11,7 +11,7 @@ function Button() {
     return (
         <div className="btn-container">
             <button className="contact-button" onClick={handleClick}>
-                Connect With Me
+                Connect With Me ➕
             </button>
         </div>
     );

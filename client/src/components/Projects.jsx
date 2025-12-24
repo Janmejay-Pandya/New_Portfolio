@@ -1,59 +1,67 @@
 import "../css/Projects.css";
 import gp from "../assets/github.png";
-import cm from "../assets/cafe_management.jpg";
-import quiz from "../assets/quiz.png";
+import md from "../assets/medledger.png"
 import qc from "../assets/chat.png";
-import cl from "../assets/class.png";
+import nb from "../assets/notionBot.png";
+import ww from "../assets/wealthwise.png";
 
 function Projects() {
     const projects = [
         {
-            name: "Chat Application: QuickChat",
+            name: "WealthWise - Pension Benefit Optimizer",
+            description: "An AI-assisted, privacy-first platform that helps retirees and near-retirees maximize their lifetime pension benefits through smart scenario modeling, optimization, and plain-language guidance.",
+            tech: ["React.js", "Django", "PostgreSQL", "LangChain", "RAG", "FastAPI", "XGBoost", "Scikit - Learn", "Python"],
+            link: "https://github.com/Janmejay-Pandya/WealthWise",
+            image: ww
+        },
+        {
+            name: "Medledger - Decentralized Health Data System",
+            description: "MedLedger is a decentralized healthcare data management platform that leverages blockchain and distributed storage to ensure secure, tamper-resistant medical records. Built on Ethereum with smart contracts and decentralized identity, it enables fast, role-based access to health data while significantly improving trust, integrity, and verification efficiency.",
+            tech: ["React.js", "Blockchain", "Ethereum", "IPFS", "Solidity", "Web3.js"],
+            link: "https://github.com/Janmejay-Pandya/healthcare-blockchain",
+            image: md
+        },
+        {
+            name: "Notion AI Agent — Smart Note & Task Creator",
+            description: "This project is an AI-powered Notion Assistant built with LangGraph, Gemini (Google Generative AI), and the Notion API. It allows you to create beautifully structured notes, checklists, and tables directly in Notion — just by typing natural language prompts into a sleek React + Tailwind UI.",
+            tech: ["Python", "FastAPI", "LangGraph", "LangChain", "React.js", "Notion API", "LLM"],
+            link: "https://github.com/Janmejay-Pandya/Notion-Bot",
+            image: nb
+        },
+        {
+            name: "QuickChat: Real-Time Chat Application",
             description: "This project is designed to provide real-time communication between users through an intuitive and feature-rich chat interface. Built with modern technologies, the application ensures a seamless user experience, robust performance, and secure communication.",
-            tech: ["React", "Javascript", "Tailwind", "Web Socket", "Express js", "MongoDb"],
+            tech: ["React.js", "Node.js", "Express.js", "Socket.io", "MongoDB"],
             link: "https://github.com/Janmejay-Pandya/Chat-Application",
             image: qc
         },
-        {
-            name: "Quiz App",
-            description: "A dynamic quiz application built with React that features an engaging user interface, power-ups, scoring system and a different result page if all the answers are correct and another one if some questions are wrong.",
-            tech: ["Tailwind", "JavaScript", "React"],
-            link: "https://github.com/Janmejay-Pandya/Quiz_App",
-            image: quiz
-        },
-        {
-            name: "Classroom Management System",
-            description: "This project provides an efficient solution for managing classroom activities, student performance, attendance tracking, and communication between teachers and students. Built with a focus on usability, it is designed to streamline the administrative tasks within an educational environment.",
-            tech: ["JavaScript", "React", "Node js", "Express js", "MongoDb"],
-            link: "https://github.com/Janmejay-Pandya/Quiz_App",
-            image: cl
-        },
-        {
-            name: "Cafe Order Management System",
-            description: "This Project was created using JAVA which has various functionalities.",
-            tech: ["Java", "Swing", "JDBC"],
-            link: "https://github.com/Janmejay-Pandya/Cafe-Order-Management-System",
-            image: cm
-        }
     ];
 
     return (
         <div className="projects">
             <div className="projects-container">
-                <h1 className="prj-title">My Projects</h1>
-                <div className="projects-divider">
-                    <span></span>
+                <div className="projects-header">
+                    <p className="eyebrow">Selected Work</p>
+                    <h1 className="prj-title">Projects</h1>
+                    <p className="prj-subtitle">
+                        A mix of full-stack builds and experiments focused on resilient UX, performance, and clean deployment pipelines.
+                    </p>
                 </div>
 
                 <div className="project-grid">
                     {projects.map((project, index) => (
                         <div className="project-card" key={index}>
+                            <div className="project-top">
+                                <span className="project-pill">Featured</span>
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                                    <img className="git" src={gp} alt="GitHub" /> View Repo
+                                </a>
+                            </div>
+
                             <div className="project-image-container">
                                 <img src={project.image} alt={project.name} className="project-image" />
                                 <div className="project-overlay">
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project-btn">
-                                        <img className="git" src={gp} alt="GitHub" /> View Source
-                                    </a>
+                                    <span className="overlay-text">Hover to peek</span>
                                 </div>
                             </div>
 

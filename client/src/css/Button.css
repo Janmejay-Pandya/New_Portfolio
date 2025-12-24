@@ -1,72 +1,69 @@
+.btn-container {
+  margin: 72px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  position: relative;
+  max-width: 680px;
+}
+
+.btn-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(122, 215, 240, 0.08), rgba(240, 209, 109, 0.08));
+  filter: blur(18px);
+  z-index: 0;
+}
+
 .contact-button {
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #4a90e2, #0072ff); /* Gradient from light to dark blue */
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
+  padding: 14px 26px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #0a0a0f;
+  font-size: 17px;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 14px 32px rgba(122, 215, 240, 0.28);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(6px);
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2), transparent 40%),
+              radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.2), transparent 35%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .contact-button:hover {
-  background: linear-gradient(45deg, #0072ff, #4a90e2); /* Reverse the gradient on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 38px rgba(240, 209, 109, 0.35);
+}
+
+.contact-button:hover::before {
+  opacity: 0.5;
 }
 
 .contact-button:active {
-  transform: translateY(0px);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(0px) scale(0.99);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Add a subtle ripple effect */
-.contact-button::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
-  z-index: -1;
-}
-
-.contact-button:hover::after {
-  animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0, 0);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(30, 30);
-    opacity: 0;
-  }
-}
-
-.btn-container {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  padding: 20px;
-  position: relative;
+.contact-button:focus-visible {
+  outline: 2px solid rgba(240, 209, 109, 0.7);
+  outline-offset: 3px;
 }
 
 /* Optional: Add this pulsating effect to draw attention */
@@ -77,5 +74,5 @@
 }
 
 .btn-container:hover .contact-button {
-  animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 1.6s infinite ease-in-out;
 }
