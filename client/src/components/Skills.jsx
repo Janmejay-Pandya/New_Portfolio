@@ -1,30 +1,93 @@
 import "../css/Skills.css";
-import c from "../assets/c.svg";
-import cpp from "../assets/c++.svg";
-import git from "../assets/git.svg";
-import java from "../assets/java.svg";
-import javascript from "../assets/javascript.svg";
-import mysql from "../assets/mysql.svg";
-import nodejs from "../assets/nodejs.svg";
-import python from "../assets/python.svg";
-import react from "../assets/react.svg";
 
 function Skills() {
+    const skillGroups = [
+        {
+            title: "Languages & Core",
+            icon: "💻",
+            skills: [
+                { name: "Python", icon: "🐍" },
+                { name: "JavaScript", icon: "🟨" },
+                { name: "TypeScript", icon: "🔷" },
+                { name: "Java", icon: "☕" },
+                { name: "C", icon: "📘" },
+                { name: "SQL", icon: "🧾" }
+            ]
+        },
+        {
+            title: "Frameworks & Libraries",
+            icon: "⚡",
+            skills: [
+                { name: "React.js", icon: "⚛️" },
+                { name: "Node.js", icon: "🌿" },
+                { name: "Express.js", icon: "🚏" },
+                { name: "Flask", icon: "🧪" },
+                { name: "FastAPI", icon: "🚀" }
+            ]
+        },
+        {
+            title: "Cloud & DevOps",
+            icon: "☁️",
+            skills: [
+                { name: "AWS", icon: "🟧" },
+                { name: "GitHub Actions (CI/CD)", icon: "🔄" },
+                { name: "Docker", icon: "🐳" },
+                { name: "Postman", icon: "📮" }
+            ]
+        },
+        {
+            title: "AI / ML",
+            icon: "🧠",
+            skills: [
+                { name: "Generative AI", icon: "✨" },
+                { name: "LangChain", icon: "🧩" },
+                { name: "LLMs", icon: "💬" },
+                { name: "RAG", icon: "🗂️" },
+                { name: "Prompt Engineering", icon: "🎯" },
+                { name: "NLP", icon: "🔍" },
+                { name: "Scikit-learn", icon: "📐" }
+            ]
+        },
+        {
+            title: "Databases",
+            icon: "🗄️",
+            skills: [
+                { name: "MySQL", icon: "🐬" },
+                { name: "PostgreSQL", icon: "🐘" },
+                { name: "MongoDB", icon: "🍃" }
+            ]
+        }
+    ];
+
     return (
-        <div className="skills-section">
-            <h1 className="sk">Skills</h1>
-            <ul className="skill-list">
-                <li className="skill-item"><img src={c} alt="C" /></li>
-                <li className="skill-item"><img src={cpp} alt="C++" /></li>
-                <li className="skill-item"><img src={git} alt="Git" /></li>
-                <li className="skill-item"><img src={java} alt="Java" /></li>
-                <li className="skill-item"><img src={javascript} alt="JavaScript" /></li>
-                <li className="skill-item"><img src={mysql} alt="MySQL" /></li>
-                <li className="skill-item"><img src={nodejs} alt="Node.js" /></li>
-                <li className="skill-item"><img src={python} alt="Python" /></li>
-                <li className="skill-item"><img src={react} alt="React" /></li>
-            </ul>
-        </div>
+        <section className="skills-section" id="skills">
+            <div className="skills-header">
+                <p className="eyebrow">Toolbox</p>
+                <h1>Skills & Technologies</h1>
+                <p className="skills-subtitle">
+                    A mix of languages, frameworks, cloud tooling, and AI/ML experience I use to build and ship products end-to-end.
+                </p>
+            </div>
+
+            <div className="skills-grid">
+                {skillGroups.map((group) => (
+                    <div className="skill-card" key={group.title}>
+                        <div className="skill-card-header">
+                            <span className="skill-card-icon" aria-hidden="true">{group.icon}</span>
+                            <h3>{group.title}</h3>
+                        </div>
+                        <div className="skill-chip-wrap">
+                            {group.skills.map((skill) => (
+                                <span className="skill-chip" key={skill.name}>
+                                    <span className="chip-icon" aria-hidden="true">{skill.icon}</span>
+                                    {skill.name}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 }
 

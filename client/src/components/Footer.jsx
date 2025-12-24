@@ -6,10 +6,14 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <div className="footer-logo">
-                    <h3>Janmejay Pandya</h3>
+                <div className="footer-brand">
+                    <h3 className="footer-title">Janmejay Pandya</h3>
+                    <p className="footer-tagline">Building thoughtful, user-first experiences.</p>
                 </div>
-                <p className="copyright">© {currentYear} Janmejay Pandya. All rights reserved.</p>
+                <div className="footer-meta">
+                    <p className="copyright">© {currentYear} Janmejay Pandya</p>
+                    <p className="footer-note">Open to collaborations and new opportunities.</p>
+                </div>
             </div>
         </footer>
     );

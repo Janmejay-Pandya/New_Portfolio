@@ -14,7 +14,7 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const roles = ["Web Developer", "Frontend Engineer", "React Specialist", "Software Developer"];
+  const roles = ["Web Developer", "Frontend Engineer", "Software Developer", "Full-stack Developer"];
 
   // Animation for fade-in effect
   useEffect(() => {
@@ -81,18 +81,17 @@ function Home() {
 
               <div className="profile-text">
                 <h1>
-                  Hi, I'm <span className="highlight">Janmejay Pandya</span>
+                  Hi, I&apos;m <span className="highlight">Janmejay Pandya</span>
                 </h1>
                 <h2 className="role-text">
-                  I'm a <span className="typed-text">{typedText}</span>
+                  I&apos;m a <span className="typed-text">{typedText}</span>
                   <span className="cursor"></span>
                 </h2>
                 <p>
-                  Web Developer specializing in front-end development. Experienced
-                  with all stages of the development cycle for dynamic web projects.
-                  Well-versed in numerous programming languages and libraries including
-                  HTML5, React, Java, C/C++, JavaScript, Python, BeautifulSoup, CSS, MySQL.
-                  Strong background in project management and customer relations.
+                  Full-stack developer with hands-on experience building scalable SaaS applications using React/Next.js, Node.js, REST
+                  APIs, and PostgreSQL. Skilled in implementing authentication, dashboards, backend logic, and cloud deployments.
+                  Passionate about solving problems through clean architecture, debugging, performance optimization, and
+                  collaborating in fast-paced startup-style environments
                 </p>
                 <div className="action-buttons">
                   <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
